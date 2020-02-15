@@ -21,7 +21,7 @@
 
     <properties>
         <java.version>13</java.version>
-        <start-class>com.epatko.petclinic.Application</start-class>
+        <!--        <start-class>com.epatko.petclinic.Application</start-class>-->
     </properties>
 
 
@@ -31,7 +31,19 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <goals>install</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <scm>
+        <developerConnection>scm:git:git@github.com:MikhailEpatko/sfg-pet-clinic.git</developerConnection>
+    </scm>
 
 </project>
