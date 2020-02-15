@@ -1,11 +1,15 @@
 package com.epatko.petclinic.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import java.time.LocalDate;
 
 @Data
-public class Pet {
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
+public class Pet extends BaseEntity {
 
     private PetType petType;
     private Owner owner;
